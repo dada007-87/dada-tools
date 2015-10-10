@@ -1,0 +1,166 @@
+@mixin calc-grid-column-custom($index, $class, $type) {
+    @if ($type == width) and ($index > 0) {
+        @if ($class=="xs") {
+            /*@media (max-width: $screen-xs) {
+                width:100%;
+            }
+            @media (min-width: $screen-xs-min) {
+                width: percentage(($index / $grid-columns));
+            }*/
+            width: percentage(($index / $grid-columns));
+        }
+        @if ($class=="sm") {
+            @media (min-width: $screen-sm-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="md") {
+            @media (min-width: $screen-md-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="lg") {
+            @media (min-width: $screen-lg-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="xl") {
+            @media (min-width: $screen-xl-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="2xl") {
+            @media (min-width: $screen-2xl-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="3xl") {
+            @media (min-width: $screen-3xl-min) {
+                width: percentage(($index / $grid-columns));
+            }
+        }
+    }
+    @if ($type == push) and ($index > 0) {
+        @if ($class=="xs") {
+            left: percentage(($index / $grid-columns));
+        }
+        @if ($class=="sm") {
+            @media (min-width: $screen-sm-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="md") {
+            @media (min-width: $screen-md-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="lg") {
+            @media (min-width: $screen-lg-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="xl") {
+            @media (min-width: $screen-xl-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="2xl") {
+            @media (min-width: $screen-2xl-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="3xl") {
+            @media (min-width: $screen-3xl-min) {
+                left: percentage(($index / $grid-columns));
+            }
+        }
+    }
+    @if ($type == push) and ($index == 0) {
+        left: auto;
+    }
+    @if ($type == pull) and ($index > 0) {
+        // right: percentage(($index / $grid-columns));
+        @if ($class=="xs") {
+            right: percentage(($index / $grid-columns));
+        }
+        @if ($class=="sm") {
+            @media (min-width: $screen-sm-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="md") {
+            @media (min-width: $screen-md-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="lg") {
+            @media (min-width: $screen-lg-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="xl") {
+            @media (min-width: $screen-xl-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="2xl") {
+            @media (min-width: $screen-2xl-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="3xl") {
+            @media (min-width: $screen-3xl-min) {
+                right: percentage(($index / $grid-columns));
+            }
+        }
+    }
+    @if ($type == pull) and ($index == 0) {
+        right: auto;
+    }
+    @if ($type == offset) {
+        // margin-left: percentage(($index / $grid-columns));
+        @if ($class=="xs") {
+            margin-left: percentage(($index / $grid-columns));
+        }
+        @if ($class=="sm") {
+            @media (min-width: $screen-sm-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="md") {
+            @media (min-width: $screen-md-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="lg") {
+            @media (min-width: $screen-lg-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="xl") {
+            @media (min-width: $screen-xl-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="2xl") {
+            @media (min-width: $screen-2xl-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+        @if ($class=="3xl") {
+            @media (min-width: $screen-3xl-min) {
+                margin-left: percentage(($index / $grid-columns));
+            }
+        }
+    }
+}
+
+@mixin make-grid-column-custom {
+    float: left;
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}

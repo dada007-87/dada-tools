@@ -1,0 +1,83 @@
+// Generate the extra large columns
+@mixin make-xl-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-xl-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-offset($columns) {
+  @media (min-width: $screen-xl-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-push($columns) {
+  @media (min-width: $screen-xl-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-xl-column-pull($columns) {
+  @media (min-width: $screen-xl-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the extra extra large columns
+@mixin make-2xl-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-2xl-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-2xl-column-offset($columns) {
+  @media (min-width: $screen-2xl-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-2xl-column-push($columns) {
+  @media (min-width: $screen-2xl-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-2xl-column-pull($columns) {
+  @media (min-width: $screen-2xl-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the extra extra extra large columns
+@mixin make-3xl-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-3xl-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-3xl-column-offset($columns) {
+  @media (min-width: $screen-3xl-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-3xl-column-push($columns) {
+  @media (min-width: $screen-3xl-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-3xl-column-pull($columns) {
+  @media (min-width: $screen-3xl-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}

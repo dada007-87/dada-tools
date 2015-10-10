@@ -1,0 +1,54 @@
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths,
+.col-xl-5ths,
+.col-2xl-5ths,
+.col-3xl-5ths {
+    position: relative;
+    min-height: 1px;
+    //padding-right: 10px;
+    //padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: $screen-sm-min) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: $screen-md-min) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: $screen-lg-min) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: $screen-xl-min) {
+    .col-xl-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: $screen-2xl-min) {
+    .col-2xl-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: $screen-3xl-min) {
+    .col-3xl-5ths {
+        width: 20%;
+        float: left;
+    }
+}

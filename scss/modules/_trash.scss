@@ -1,0 +1,33 @@
+trash {
+    display:block;
+}
+
+.trash {
+    margin:10px;
+}
+
+.trash-list {
+    position:relative;
+    height:100px;
+    width:100px;
+    background-color: $white;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    opacity:0.5;
+    .trash-message {
+        display:none;
+        text-align: center;    
+        line-height: 100px;
+        position:absolute;
+        width:100%;
+        z-index:2;
+    }
+    &.dndDragover {
+        background-color:darken($white,30%);
+        
+        .trash-message {
+            display:block;
+        }
+    }
+}

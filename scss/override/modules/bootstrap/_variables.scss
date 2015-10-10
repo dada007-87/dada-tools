@@ -1,0 +1,34 @@
+// Extra large screen / very wide desktop
+$screen-xl:                  1600px !default;
+$screen-xl-min:              $screen-xl !default;
+$screen-xl-desktop:          $screen-xl-min !default;
+
+// Extra extra large screen / very wide desktop
+$screen-2xl:                  1900px !default;
+$screen-2xl-min:              $screen-2xl !default;
+$screen-2xl-desktop:          $screen-2xl-min !default;
+
+// Extra extra extra large screen / very wide desktop
+$screen-3xl:                  2300px !default;
+$screen-3xl-min:              $screen-3xl !default;
+$screen-3xl-desktop:          $screen-3xl-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-lg-max:              ($screen-xl-min - 1) !default;
+$screen-xl-max:              ($screen-2xl-min - 1) !default;
+$screen-2xl-max:              ($screen-3xl-min - 1) !default;
+
+// Extra large screen / very wide desktop
+$container-xlarge-desktop:      ((1540px + $grid-gutter-width)) !default;
+//** For `$screen-xl-min` and up.
+$container-xl:                 $container-xlarge-desktop !default;
+
+// Extra large screen / very wide desktop
+$container-2xlarge-desktop:      ((1840px + $grid-gutter-width)) !default;
+//** For `$screen-2xl-min` and up.
+$container-2xl:                 $container-2xlarge-desktop !default;
+
+// Extra large screen / very wide desktop
+$container-3xlarge-desktop:      ((2240px + $grid-gutter-width)) !default;
+//** For `$screen-3xl-min` and up.
+$container-3xl:                 $container-3xlarge-desktop !default;

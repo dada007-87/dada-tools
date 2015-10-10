@@ -1,0 +1,30 @@
+@mixin layout-wrapper {
+    @include clearfix();
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+        width: $screen-sm-min - 15px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: $screen-md-min - 15px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        width: $screen-lg-min - 15px;
+    }
+
+    max-width: $screen-xl-min - 15px;
+    @include transition(width, height, font-size);
+    @include transition-duration(1s);
+    /*
+    @media (min-width: $screen-xl-min) {
+        width: $screen-xl-min - 15px;
+    }
+    @media (min-width: $screen-2xl-min) {
+        width: $screen-2xl-min - 15px;
+    }
+    @media (min-width: $screen-3xl-min) {
+        width: $screen-3xl-min - 15px;
+    }*/
+}

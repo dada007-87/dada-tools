@@ -1,0 +1,16 @@
+.dndDragging  {
+    background-color:#ffe376;
+}
+
+.dndDraggingSource {
+    background-color:#CCC;
+}
+
+.dndPlaceholder {
+    background-color:#FFF;
+}
+
+ul[dnd-list],
+ul[dnd-list] > li {
+	position: relative;
+}

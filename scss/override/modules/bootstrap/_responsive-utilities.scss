@@ -1,0 +1,112 @@
+@include responsive-invisibility('.visible-xs, .visible-sm, .visible-md, .visible-lg, .visible-xl, .visible-2xl, .visible-3xl');
+
+.visible-xl-block,
+.visible-xl-inline,
+.visible-xl-inline-block,
+.visible-2xl-block,
+.visible-2xl-inline,
+.visible-2xl-inline-block,
+.visible-3xl-block,
+.visible-3xl-inline,
+.visible-3xl-inline-block {
+  display: none !important;
+}
+
+// Invisibility utilities
+
+// LG visibility
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+  @include responsive-visibility('.visible-lg');
+}
+.visible-lg-block {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+    display: inline-block !important;
+  }
+}
+// XL visibility
+@media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+  @include responsive-visibility('.visible-xl');
+}
+.visible-xl-block {
+  @media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+    display: block !important;
+  }
+}
+.visible-xl-inline {
+  @media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+    display: inline !important;
+  }
+}
+.visible-xl-inline-block {
+  @media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+    display: inline-block !important;
+  }
+}
+// 2XL visibility
+@media (min-width: $screen-2xl-min) and (max-width: $screen-2xl-max) {
+  @include responsive-visibility('.visible-2xl');
+}
+.visible-2xl-block {
+  @media (min-width: $screen-2xl-min) and (max-width: $screen-2xl-max) {
+    display: block !important;
+  }
+}
+.visible-2xl-inline {
+  @media (min-width: $screen-2xl-min) and (max-width: $screen-2xl-max) {
+    display: inline !important;
+  }
+}
+.visible-2xl-inline-block {
+  @media (min-width: $screen-2xl-min) and (max-width: $screen-2xl-max) {
+    display: inline-block !important;
+  }
+}
+// 3XL visibility
+@media (min-width: $screen-3xl-min) {
+  @include responsive-visibility('.visible-3xl');
+}
+.visible-3xl-block {
+  @media (min-width: $screen-3xl-min) {
+    display: block !important;
+  }
+}
+.visible-3xl-inline {
+  @media (min-width: $screen-3xl-min) {
+    display: inline !important;
+  }
+}
+.visible-3xl-inline-block {
+  @media (min-width: $screen-3xl-min) {
+    display: inline-block !important;
+  }
+}
+
+
+// Invisibility utilities
+
+// LG invisibility
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+  @include responsive-invisibility('.hidden-lg');
+}
+// XL invisibility
+@media (min-width: $screen-xl-min)  and (max-width: $screen-xl-max) { 
+  @include responsive-invisibility('.hidden-xl');
+}
+// 2XL invisibility
+@media (min-width: $screen-2xl-min)  and (max-width: $screen-2xl-max) { 
+  @include responsive-invisibility('.hidden-2xl');
+}
+// 3XL invisibility
+@media (min-width: $screen-3xl-min) {
+  @include responsive-invisibility('.hidden-3xl');
+}

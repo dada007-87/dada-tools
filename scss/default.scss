@@ -1,0 +1,30 @@
+/*---------------------------------MIXINS-------------------------------------*/
+@import "mixins/all";
+
+/*---------------------------------VARIABLES----------------------------------*/
+@import "variables/all";
+
+/*---------------------------------THEMES-------------------------------------*/
+@import "themes/default/fonts";
+@import "themes/default/variables-colors";
+@import "themes/default/variables";
+
+/*---------------------------------MODULES------------------------------------*/
+//Bootstrap 
+@import "modules/bootstrap";
+
+@import "modules/drag-drop";
+@import "modules/resizable";
+@import "modules/trash";
+
+/*---------------------------------LAYOUT-------------------------------------*/
+@import "layout/bootstrap";
+
+/*---------------------------------BASE---------------------------------------*/
+@import "base/all";
+
+/*---------------------------------THEMES override----------------------------*/
+@import "themes/default/variables-colors";
+@import "themes/default/variables";
+
+@import "themes/default/style";
