@@ -34,7 +34,7 @@ var TestDirective = (function () {
             controller: "TestItemController",
             controllerAs: "testItem",
             templateUrl: "app/templates/test/test-item.html",
-            link: function ($scope, $elem, $attrs) {
+            link: function ($scope, $elem, $attrs, cd) {
                 console.log("Test Directive");
             }
         };
@@ -73,7 +73,6 @@ var TestService = (function () {
         $routeProvider
             .when("/", { templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" })
             .otherwise({ templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" });
-        // use the HTML5 History API
         $locationProvider.html5Mode(true);
     });
 })();
