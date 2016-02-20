@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Giorni di differenza tra 2 date:</h1>
+
+    <div class="form-group">
+        <label for="from">Da</label>
+        <input type="date" class="form-control" id="from" placeholder="Da" ng-model="date.from">
+    </div>
+    <div class="form-group">
+        <label for="to">A</label>
+        <input type="date" class="form-control" id="to" placeholder="A" ng-model="date.to">
+    </div>
+    <div>
+        Da: <span ng-bind="date.from"></span>
+    </div>
+    <div>
+        A: <span ng-bind="date.to"></span>
+    </div>
+    <div class="result">
+        Giorni tra 2 date: <span ng-bind="date.result"></span>
+    </div>
+    <button ng-click="date.daysBetweenDates()">Giorni di differenza</button>
+</div>

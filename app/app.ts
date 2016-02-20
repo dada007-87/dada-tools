@@ -3,6 +3,7 @@
 /// <reference path="../scripts/typings/jquery/jquery.d.ts" />
 
 //CONTROLLERS
+/// <reference path="controllers/DateController.ts" />
 /// <reference path="controllers/TestController.ts" />
 /// <reference path="controllers/TestItemController.ts" />
 
@@ -21,8 +22,10 @@
     
     // APIs
     //app.service("TestService", TestService);
+    app.constant("moment", moment);
 
     // Controllers
+    app.controller("DateController", DateController);
     app.controller("TestController", TestController);
     app.controller("TestItemController", TestItemController);
 
@@ -33,9 +36,10 @@
     app.config(function ($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider): void {
         $routeProvider
             .when("/", { templateUrl: "app/views/home.html", controller:"TestController", controllerAs:"test" })
+            .when("/date", { templateUrl: "app/views/date.html", controller:"DateController", controllerAs:"date" })
             .otherwise({ templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" });
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
         
     });
     

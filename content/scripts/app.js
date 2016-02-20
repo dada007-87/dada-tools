@@ -1,3 +1,15 @@
+var DateController = (function () {
+    function DateController(moment) {
+        var _this = this;
+        this.moment = moment;
+        this.daysBetweenDates = function () {
+            _this.result = _this.moment(_this.from).format();
+        };
+        console.log("DateController");
+        console.log(this);
+    }
+    return DateController;
+})();
 var TestController = (function () {
     function TestController() {
         console.log("TestController");
@@ -50,6 +62,7 @@ var TestService = (function () {
 /// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
 /// <reference path="../scripts/typings/jquery/jquery.d.ts" />
 //CONTROLLERS
+/// <reference path="controllers/DateController.ts" />
 /// <reference path="controllers/TestController.ts" />
 /// <reference path="controllers/TestItemController.ts" />
 //DIRECTIVES
@@ -63,7 +76,9 @@ var TestService = (function () {
     var app = angular.module("test", ["ngRoute"]);
     // APIs
     //app.service("TestService", TestService);
+    app.constant("moment", moment);
     // Controllers
+    app.controller("DateController", DateController);
     app.controller("TestController", TestController);
     app.controller("TestItemController", TestItemController);
     // Directives
@@ -72,7 +87,8 @@ var TestService = (function () {
     app.config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", { templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" })
+            .when("/date", { templateUrl: "app/views/date.html", controller: "DateController", controllerAs: "date" })
             .otherwise({ templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" });
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
     });
 })();
