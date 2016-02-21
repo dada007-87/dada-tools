@@ -1,43 +1,50 @@
-/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
-/// <reference path="../scripts/typings/jquery/jquery.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
 
 //CONTROLLERS
 /// <reference path="controllers/DateController.ts" />
-/// <reference path="controllers/TestController.ts" />
-/// <reference path="controllers/TestItemController.ts" />
+/// <reference path="controllers/PageController.ts" />
+/// <reference path="controllers/HomeController.ts" />
 
 //DIRECTIVES
-/// <reference path="directives/TestDirective.ts" />
+
+//FILTERS
+/// <reference path="filters/MomentFilter.ts" />
 
 //MODELS
 /// <reference path="models/ITest.ts" />
 
 //SERVICES
-/// <reference path="services/TestService.ts" />
+/// <reference path="services/PageService.ts" />
 
 (function () {
     // Main module
     var app: ng.IModule = angular.module("test", ["ngRoute"]);
-    
-    // APIs
-    //app.service("TestService", TestService);
+
+    // Libraries
     app.constant("moment", moment);
+
+    // Services
+    //app.service("TestService", TestService);
+    app.service("PageService", PageService);
+
 
     // Controllers
     app.controller("DateController", DateController);
-    app.controller("TestController", TestController);
-    app.controller("TestItemController", TestItemController);
+    app.controller("PageController", PageController);
+    app.controller("HomeController", HomeController);
 
     // Directives
-    app.directive("test", TestDirective.getInstance);
+    //app.directive("test", TestDirective.getInstance);
+
+    // Filters
+    app.filter("moment", MomentFilter.getInstance);
 
     // Routing configuration
     app.config(function ($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider): void {
         $routeProvider
-            .when("/", { templateUrl: "app/views/home.html", controller:"TestController", controllerAs:"test" })
+            .when("/", { templateUrl: "app/views/home.html", controller:"HomeController", controllerAs:"home" })
             .when("/date", { templateUrl: "app/views/date.html", controller:"DateController", controllerAs:"date" })
-            .otherwise({ templateUrl: "app/views/home.html", controller: "TestController", controllerAs: "test" });
+            .otherwise({ templateUrl: "app/views/home.html", controller: "HomeController", controllerAs: "home" });
 
         $locationProvider.html5Mode(false);
         

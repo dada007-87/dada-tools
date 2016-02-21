@@ -1,22 +1,64 @@
-<div class="container">
-    <h1>Giorni di differenza tra 2 date:</h1>
+<div class="section">
+    <div class="container">
 
-    <div class="form-group">
-        <label for="from">Da</label>
-        <input type="date" class="form-control" id="from" placeholder="Da" ng-model="date.from">
+        <h2>Title: {{date.PageService.title}}</h2>
+        <h1>Differenza tra 2 date:</h1>
+
+        <div class="row">
+
+            <div class="form-group col-xs-6 col-sm-4">
+                <label for="from">data iniziale</label>
+                <input type="date" class="form-control" id="from" ng-model="date.from">
+            </div>
+            <div class="form-group col-xs-6 col-sm-4">
+                <label for="to">data finale</label>
+                <input type="date" class="form-control" id="to" ng-model="date.to">
+            </div>
+            <div class="form-group col-xs-12 col-sm-4">
+                <label for="differenceBetweenDates">
+                    <select ng-options="u.label for u in date.unitOptions track by u.value" ng-model="date.unitDifference"></select>
+                    di differenza
+                </label>
+                <input type="number" disabled class="form-control" id="differenceBetweenDates"
+                       ng-model="date.differenceBetweenDates">
+            </div>
+
+            <div class="col-xs-12">
+                Dal <strong><span ng-bind="date.from | moment: 'DD MMMM YYYY'"></span></strong>
+                al <strong><span ng-bind="date.to | moment: 'DD MMMM YYYY'"></span></strong>
+                ci sono <strong><span ng-bind="date.differenceBetweenDates"></span></strong>
+                <strong><span ng-bind="date.unitDifference.label"></span></strong>
+                di differenza
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="to">A</label>
-        <input type="date" class="form-control" id="to" placeholder="A" ng-model="date.to">
-    </div>
-    <div>
-        Da: <span ng-bind="date.from"></span>
-    </div>
-    <div>
-        A: <span ng-bind="date.to"></span>
-    </div>
-    <div class="result">
-        Giorni tra 2 date: <span ng-bind="date.result"></span>
-    </div>
-    <button ng-click="date.daysBetweenDates()">Giorni di differenza</button>
 </div>
+
+<div class="section">
+    <div class="container">
+
+        <h1>Somma/sottrai un periodo ad una data:</h1>
+
+        <div class="row">
+            <div class="form-group col-xs-6 col-sm-4">
+                <label for="initialDate">Data iniziale</label>
+                <input type="date" class="form-control" id="initialDate" ng-model="date.initialDate">
+            </div>
+            <div class="form-group col-xs-6 col-sm-4">
+                <label for="addend"><select ng-options="u.label for u in date.unitOptions track by u.value" ng-model="date.unitAddend"></select></label>
+                <input type="number" class="form-control" id="addend" ng-model="date.addend">
+            </div>
+            <div class="form-group col-xs-12 col-sm-4">
+                <label for="finalDate">Data finale</label>
+                <input type="date" disabled class="form-control" id="finalDate" ng-model="date.finalDate">
+            </div>
+
+            <div class="col-xs-12">
+                Sommando <strong><span ng-bind="date.addend"></span></strong> <strong><span ng-bind="date.unitAddend.label"></span></strong>
+                al <strong><span ng-bind="date.initialDate | moment: 'DD MMMM YYYY'"></span></strong>
+                si arriva al <strong><span ng-bind="date.finalDate | moment: 'DD MMMM YYYY'"></span></strong>
+            </div>
+        </div>
+    </div>
+</div>
+

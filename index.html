@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="test">
+<html lang="it" ng-app="test" ng-controller="PageController as page">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DaDa Scaffold Test page</title>
-
     <base href="/dada-tools/">
 
     <!--STYLESHEETS-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.4.9/angular-route.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment-with-locales.min.js"></script>
 
     <!--DEVEL-->
@@ -24,6 +22,8 @@
     <!--<link href="content/css/styles.min.css" rel="stylesheet" />-->
     <!--<script src="content/scripts/app.min.js"></script>-->
     <!--<script src="content/scripts/scripts.min.js"></script>-->
+
+    <title>DaDa Tools {{page.service.title != null ? "| " + page.service.title : null}}</title>
 
 </head>
 <body>

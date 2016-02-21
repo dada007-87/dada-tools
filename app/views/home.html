@@ -1,47 +1,6 @@
 <div class="container">
 
-    <h1>Angular view test</h1>
-    <p><code>app/views/home.html</code></p>
+    <h1>DaDa Tools Home</h1>
 
-    <blockquote>
-        <p>See console.log() for further info.</p>
-        <footer>said by <cite>me</cite></footer>
-    </blockquote>
-
-    <h3>Angular Directive and Template test:</h3>
-    <p><code>app/templates/test/test-item.html</code></p>
-
-    <ul>
-        <li test ng-repeat="item in test.list" test-item="item">Test template</li>
-    </ul>
-
-    <h3>Bootstrap table test:</h3>
-    <p><code>scss/modules/bootstrap</code> bundled in <code>content/css/styles.css</code></p>
-    <div class="table-responsive">
-    <table class="table table-striped table-condensed">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Age</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="item in test.list">
-                <td>
-                    <span>{{item.name}}</span>
-                </td>
-                <td>
-                    <span>{{item.surname}}</span>
-                </td>
-                <td>
-                    <span>{{item.age}}</span>
-                </td>
-                <td>
-                    <span>This is a long text to test the table responsive by Bootstrap</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+    <a ng-href="{{date}}" href>Date tools</a>
 </div>
