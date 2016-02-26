@@ -1,0 +1,25 @@
+$section-bg-color: $white !default;
+$section-color: $black !default;
+
+$section-alternate-bg-color: $black !default;
+$section-alternate-color: $white !default;
+
+.section {
+    padding-top:50px;
+    padding-bottom:50px;
+    &:nth-of-type(2n) {
+        background-color: $section-bg-color;
+        color: $section-color;
+    }
+    &:nth-of-type(2n +1) {
+        background-color: $section-alternate-bg-color;
+        color: $section-alternate-color;
+    }
+
+}
+
+.section-title {
+    margin: 0;
+    line-height: 0.75;
+    margin-bottom: 20px;
+}

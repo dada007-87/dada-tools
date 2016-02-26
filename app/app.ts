@@ -46,7 +46,7 @@
             .when("/date", { templateUrl: "app/views/date.html", controller:"DateController", controllerAs:"date" })
             .otherwise({ templateUrl: "app/views/home.html", controller: "HomeController", controllerAs: "home" });
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
         
     });
     

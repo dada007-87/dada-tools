@@ -15,6 +15,7 @@
 
 @import "modules/drag-drop";
 @import "modules/resizable";
+@import "modules/section";
 @import "modules/trash";
 
 /*---------------------------------LAYOUT-------------------------------------*/
@@ -26,5 +27,7 @@
 /*---------------------------------THEMES override----------------------------*/
 @import "themes/default/variables-colors";
 @import "themes/default/variables";
+
+@import "themes/default/page-date";
 
 @import "themes/default/style";
