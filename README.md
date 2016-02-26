@@ -1,2 +1,2 @@
 # dada-tools
-Single page application based on AngularJS, Typescript, SCSS (modular, with Bootstrap)
+Applicazione single page basata su AngularJS, Typescript, SCSS (con Bootstrap) che raccoglie strumenti utili
